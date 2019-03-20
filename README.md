@@ -3,7 +3,7 @@
 K-Mean Clustering - Language C#
 
 ## Problem definition
-You are hired by a school to perform a grouping of students based on the mark for 24 students in order for school to design different curriculum for different group of students in subsequent semesters. You have to advise the school to group these students into
+You are hired by a school to perform a grouping of students based on the mark for 24 students in order for school to design different curriculum for different group of students in subsequent semesters. You have to advise the school to group students in table 3 into
 groups that you have discovered.
 
 Table 1 below shows the simulated results for four subjects (Chemistry, History, Biology, Chinese) of 24 students in a secondary school in first semester. 
@@ -51,3 +51,11 @@ Next, in Part 3 and 4 of our CLI, we classified the data for table 2 and uses it
 Lastly, we classified table 3 data using recalculated centroid and get the final result at part 5
 
 ![result 5](https://github.com/JoeSiew/K-MeanClusteringCSharp/blob/master/images/result5.png)
+
+### Result
+Based on the problem given, we used student's data from table 1 and table 2 to train the algorithm on how to group the students by the similarity measure (in this case is Euclidean Distance) to the centroid. From the elbow method, we uses K = 3 which could be classified to good, average and poor students.
+
+Based on the image given, there are 2 good student, 1 average student and 1 poor from table 3.
+
+## Credit
+Yong Ming Yi, Lee Der Yew, Ooi Shu Liang
