@@ -55,7 +55,7 @@ Lastly, we classified table 3 data using recalculated centroid and get the final
 ### Result
 Based on the problem given, we used student's data from table 1 and table 2 to train the algorithm on how to group the students by the similarity measure (in this case is Euclidean Distance) to the centroid. From the elbow method, we uses K = 3 which could be classified to good, average and poor students.
 
-Based on the image given, there are 2 good student, 1 average student and 1 poor from table 3.
+Based on the result from part 5, there are 2 good student, 1 average student and 1 poor from table 3.
 
 ## Credit
 Yong Ming Yi, Lee Der Yew, Ooi Shu Liang
