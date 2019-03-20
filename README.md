@@ -26,7 +26,7 @@ The first part is to show the result of our computation at finding the optimum c
 
 ![centroid](https://github.com/JoeSiew/K-MeanClusteringCSharp/blob/master/images/centroid.png)
 
-Subsequently, our algorithm will use table 1 to produce the following result for us to plot the graph to determine the best k value
+Subsequently, our algorithm will use table 1 to produce the following result
 
 ![result 1](https://github.com/JoeSiew/K-MeanClusteringCSharp/blob/master/images/result1.png)
 
@@ -35,8 +35,8 @@ From the total Sum of Square Errors of each K or clusters, we are able to plot a
 ![graph](https://github.com/JoeSiew/K-MeanClusteringCSharp/blob/master/images/graph.png)
 
 #### Part 2
-From the graph, the elbow is not clearly defined, however the closest point is at K = 3. Hence K = 3 is slected as Part 2 of our CLI to compute classification.
-(Note: The k value can be easily changed by editing "finalK" variable in the program script
+From the graph, the elbow is not clearly defined, however the closest point is at K = 3. Hence K = 3 is selected as Part 2 of our CLI to compute classification.
+(Note: The k value can be easily changed by editing "finalK" variable in the program script)
 
 ![result 2](https://github.com/JoeSiew/K-MeanClusteringCSharp/blob/master/images/result2.png)
 
