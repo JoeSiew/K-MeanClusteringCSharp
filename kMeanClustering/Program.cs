@@ -62,10 +62,13 @@ namespace kMeanClustering
             centroid.Add(new double[,] { { 70, 70, 70, 70 } });
             centroid.Add(new double[,] { { 34, 32, 39, 40 }, { 71, 75, 73, 78 } });
             centroid.Add(new double[,] { { 40, 40, 40, 40 }, { 60, 60, 60, 60 }, { 80, 80, 80, 80 } });
-            centroid.Add(new double[,] { { 40, 40, 40, 40 }, { 55, 55, 55, 55 }, 
+
+            centroid.Add(new double[,] { { 40, 40, 40, 40 }, { 55, 55, 55, 55 },
                 { 70, 70, 70, 70 }, { 85, 85, 85, 85 } });
+
             centroid.Add(new double[,] { { 40, 40, 40, 40 }, { 54, 54, 54, 54 },
                 { 66, 66, 66, 66 }, { 78, 78, 78, 78 }, { 90, 90, 90, 90 } });
+
             centroid.Add(new double[,] { { 40, 40, 40, 40 }, { 54, 54, 54, 54 },
                 { 66, 66, 66, 66 }, { 77, 77, 77, 77 }, { 86, 86, 86, 86 }, { 92, 92, 92, 92 } });
 
@@ -73,7 +76,7 @@ namespace kMeanClustering
             ArrayList clsfedPoint = new ArrayList();
             for (int k = 0; k < centroid.Count; k++)
                 clsfedPoint.Add(new ArrayList());
-            
+
             //get total SSE for each k to plot graph later
             double[] totalSSE = new double[centroid.Count];
 
@@ -102,7 +105,7 @@ namespace kMeanClustering
                             //Euclidean algorithm
                             for (int a = 0; a < noOfVar; a++)
                                 sse2[centroidNo] += Math.Pow(((double[,])centroid[k])[centroidNo, a] - table1[sampleNo, a], 2);
-                            
+
                             //find least SSE
                             if (sse2[centroidNo] < minValue)
                             {
@@ -161,10 +164,10 @@ namespace kMeanClustering
                 Console.WriteLine("K = " + (x + 1));
                 for (int y = 0; y < x + 1; y++)
                 {
-                    Console.Write("( ");
+                    Console.Write("Centroid ( ");
                     for (int a = 0; a < noOfVar; a++)
-                        Console.Write(String.Format("{0:f2}{1}", ((double[,])centroid[x])[y, a], a != noOfVar - 1 ? ", " : " ) : "));
-                    Console.Write(Convert.ToString(((ArrayList)((ArrayList)clsfedPoint[x])[y]).Count) +"\n");
+                        Console.Write(String.Format("{0:f2}{1}", ((double[,])centroid[x])[y, a], a != noOfVar - 1 ? ", " : " ) have : "));
+                    Console.Write(Convert.ToString(((ArrayList)((ArrayList)clsfedPoint[x])[y]).Count) + " students \n");
                 }
                 Console.WriteLine("Total SSE^2 : " + totalSSE[x] + "\n");
             }
@@ -205,16 +208,16 @@ namespace kMeanClustering
                     }
                 }
                 //classify point into centroid with least SSE
-                Console.Write("( ");
+                Console.Write("Student ( ");
                 for (int varNo = 0; varNo < noOfVar; varNo++)
                 {
                     point[varNo] = table2[sampleNo, varNo];
                     Console.Write(String.Format("{0}{1}", point[varNo], varNo != noOfVar - 1 ? ", " : " )"));
                 }
-                Console.WriteLine(" : Centroid No." + (minPoint + 1));
+                Console.WriteLine(" belong to : Centroid No." + (minPoint + 1));
                 ((ArrayList)((ArrayList)clsfedPoint[finalK])[minPoint]).Add(point.Clone());
             }
-            
+
             //reset all value of centroid to zero, for recalculate new centroid later
             for (int centroidNo = 0; centroidNo < ((double[,])centroid[finalK]).GetLength(0); centroidNo++)
             {
@@ -236,7 +239,7 @@ namespace kMeanClustering
                         ((double[,])centroid[finalK])[centroidNo, varNo] /= ((ArrayList)((ArrayList)clsfedPoint[finalK])[centroidNo]).Count;
                     }
                 }
-                
+
             }
             //display new centroid
             Console.WriteLine("\n--------------------------------------------------------------------------");
@@ -248,7 +251,7 @@ namespace kMeanClustering
                     Console.Write(String.Format("{0:f2}{1}", ((double[,])centroid[finalK])[y, a], a != noOfVar - 1 ? ", " : " )"));
                 Console.WriteLine();
             }
-            
+
             //Below is for table 3
             //classify table 3
             Console.WriteLine("\n--------------------------------------------------------------------------");
@@ -273,13 +276,13 @@ namespace kMeanClustering
                     }
                 }
                 //classify point into centroid with least SSE
-                Console.Write("( ");
+                Console.Write("Student ( ");
                 for (int varNo = 0; varNo < noOfVar; varNo++)
                 {
                     point[varNo] = table3[sampleNo, varNo];
                     Console.Write(String.Format("{0}{1}", point[varNo], varNo != noOfVar - 1 ? ", " : " )"));
                 }
-                Console.WriteLine(" : Centroid No." + (minPoint + 1));
+                Console.WriteLine(" belong to : Centroid No." + (minPoint + 1));
                 ((ArrayList)((ArrayList)clsfedPoint[finalK])[minPoint]).Add(point.Clone());
             }
             Console.WriteLine();
