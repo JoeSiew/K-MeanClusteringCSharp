@@ -57,5 +57,9 @@ Based on the problem given, we used student's data from table 1 and table 2 to t
 
 Based on the result from part 5, there are 2 good student, 1 average student and 1 poor from table 3.
 
-## Credit
-Yong Ming Yi, Lee Der Yew, Ooi Shu Liang
+## Contributor
+Yong Ming Yi - https://github.com/bladly 
+ 
+Lee Der Yew 
+  
+Ooi Shu Liang
